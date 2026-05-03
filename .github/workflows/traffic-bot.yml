@@ -1,18 +1,19 @@
-name: TraffiKing - GitHub Actions Bot
+name: TraffiKing Main Account
 
 on:
   schedule:
-    # Run 3 times per day (every 8 hours) - Conservative
-    - cron: '0 0,8,16 * * *'  # 12 AM, 8 AM, 4 PM UTC
-  workflow_dispatch: # Manual trigger
+    # Run every 8 hours - Safe Zone Mode
+    # Times: 12 AM, 8 AM, 4 PM UTC
+    - cron: '0 0,8,16 * * *'
+  workflow_dispatch:
   
 jobs:
-  generate-traffic:
+  traffic-generation:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
       
       - name: Setup Node.js
@@ -20,20 +21,19 @@ jobs:
         with:
           node-version: '18'
       
-      - name: Run Traffic Bot (GitHub Mode)
+      - name: Run TraffiKing Bot
         env:
-          BLOG_URL: ${{ secrets.BLOG_URL || 'https://allai-info.blogspot.com' }}
-          PLATFORM: 'github'
-          SESSIONS: '12'  # Conservative for GitHub
+          BLOG_URL: 'https://allai-info.blogspot.com'
+          ACCOUNT_NAME: 'MAIN'
+          SESSIONS: '10'
           PAGES_PER_SESSION: '3'
-          MIN_READ_TIME: '15'
-          MAX_READ_TIME: '40'
+          MIN_READ_TIME: '20'
+          MAX_READ_TIME: '45'
           AD_CLICK_CHANCE: '35'
-        run: node .github/scripts/traffic-bot.js
+        run: |
+          echo "🚀 Starting TraffiKing - Main Account"
+          node .github/scripts/traffic-bot.js
       
       - name: Summary
         if: always()
-        run: |
-          echo "✅ GitHub Actions bot completed"
-          echo "Platform: GitHub Actions"
-          echo "Estimated time: 12-15 minutes"
+        run: echo "✅ Main account session completed"
