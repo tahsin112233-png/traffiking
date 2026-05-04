@@ -1,85 +1,52 @@
-# 👑 TraffiKing
+# 👑 TraffiKing - Safe Zone Edition
 
-**Professional Web Traffic Generator with Proxy Support**
+Professional Blogspot traffic generator with multi-account support.
 
-![TraffiKing](https://img.shields.io/badge/TraffiKing-v1.0-blueviolet)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-active-success)
+## 🎯 Features
 
-## 🌟 Features
+- ✅ Safe Zone Mode (270 views/day)
+- ✅ Multi-account support (3 accounts)
+- ✅ Adsterra-optimized (35% CTR)
+- ✅ GitHub Actions automation
+- ✅ Zero ban risk
 
-- ✨ **Modern Web Interface** - Beautiful, responsive design
-- 🔒 **Proxy Support** - Manual & auto-fetch free proxies
-- 📊 **Real-time Statistics** - Live monitoring and analytics
-- 📝 **Activity Logging** - Detailed request logs
-- 🎯 **Customizable** - Full control over traffic patterns
-- 📱 **Mobile Responsive** - Works on all devices
-- ⚡ **Fast & Efficient** - Optimized performance
+## 📊 Current Setup
 
-## 🚀 Quick Start
+- Main Account: Every 8 hours (3 runs/day)
+- Fork 1: Every 8 hours (offset +3h)
+- Fork 2: Every 8 hours (offset +6h)
+- Total: 270 page views/day
+- Monthly: ~8,100 page views
 
-1. Visit your deployed URL
-2. Enter target website URL
-3. Configure settings (sessions, delays, etc.)
-4. Optionally add proxies
-5. Click "Start TraffiKing"
+## ⚙️ Configuration
 
-## ⚙️ Configuration Options
+Configured for: https://allai-info.blogspot.com
 
-### Basic Settings
-- **Target URL**: Website to generate traffic for
-- **Sessions**: Number of browsing sessions
-- **Pages/Session**: Pages to visit per session
-- **Delay**: Wait time between sessions
+- Sessions: 10 per run
+- Pages: 3 per session
+- Read time: 20-45 seconds
+- Ad click rate: 35%
 
-### Proxy Options
-- **No Proxy**: Direct connection
-- **Auto-Fetch**: Automatically get free proxies
-- **Manual**: Enter your own proxy list
+## 🚀 Usage
 
-### Advanced Options
-- Randomize timing patterns
-- Follow internal links
-- Rotate user agents
+1. Fork this repository
+2. Enable GitHub Actions
+3. Update schedule in `.github/workflows/traffic-bot.yml`
+4. Wait for automatic runs
 
-## 📊 Statistics
+## ⚠️ Disclaimer
 
-TraffiKing provides detailed statistics:
-- Total requests
-- Success/failure rates
-- Average response times
-- Proxy performance metrics
+Educational purposes only. Use on your own websites.
 
-## ⚠️ Important Notice
+## 📈 Results
 
-**This tool is for EDUCATIONAL PURPOSES ONLY**
+- Expected traffic: 270 views/day
+- Expected clicks: ~95/day
+- Estimated revenue: $25-75/month (grows over time)
 
-- ✅ Use only on websites you own
-- ❌ Do not use for malicious purposes
-- ❌ Do not violate Terms of Service
-- ⚠️ Artificial traffic may be detectable
+## 🛡️ Safety
 
-## 🛠️ Technology Stack
-
-- **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Backend**: Vercel Serverless Functions
-- **APIs**: Node.js
-- **Hosting**: Vercel
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 🤝 Contributing
-
-Contributions welcome! Please read our contributing guidelines.
-
-## 📧 Contact
-
-For questions or support, please open an issue.
-
---- 💌 akash.afnan112233@gmail.com
-
-**Made with ❤️ for Educational Purposes**
-
-👑 **TraffiKing** - Rule Your Traffic!
+- Conservative traffic volume
+- Natural timing patterns
+- Realistic user behavior
+- Low ban risk
